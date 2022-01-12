@@ -57,8 +57,8 @@ class AdminTest extends TestCase
         $this->data = new CategoryController;
         $response = $this->data->edit(2);
         $data = Category::find(2);
-        //$this->assertEquals($response,view('admin.category.edit',compact('data')));
-        $this->assertEquals($response,$response);
+        $this->assertEquals($response,view('admin.category.edit',compact('data')));
+        
     }
 
     public function test_contactindex()
@@ -66,23 +66,23 @@ class AdminTest extends TestCase
         $this->data = new ContactController;
         $response = $this->data->index();
         $data = Contact::all();
-       // $this->assertEquals($response , view('admin.contact.index',compact('data')));
-        $this->assertTrue(true);
+        $this->assertEquals($response , view('admin.contact.index',compact('data')));
+        
     }
     public function test_show()
     {
         $this->data = new ContactController;
         $response = $this->data->show(1);
         $data = Contact::find(1);
-        //$this->assertEquals($response , view('admin.contact.show',compact('data')));
-        $this->assertTrue(true);
+        $this->assertEquals($response , view('admin.contact.show',compact('data')));
+        
     }
     public function test_sldideredit() {
         $this->data = new SliderController;
         $response = $this->data->edit(1);
         $data = Category::find(1);
-       // $this->assertEquals($response,view('admin.slider.edit',compact('data')));
-        $this->assertEquals($response,$response);
+        $this->assertEquals($response,view('admin.slider.edit',compact('data')));
+        
     }
 
 
